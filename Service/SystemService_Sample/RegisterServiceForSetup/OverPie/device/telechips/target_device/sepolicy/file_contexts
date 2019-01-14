@@ -1,0 +1,88 @@
+/dev/mali				u:object_r:gpu_device:s0
+/dev/galcore			u:object_r:gpu_device:s0
+
+/dev/vpu_.*				u:object_r:vpu_device:s0
+/dev/vp9_dev_mgr		u:object_r:vpu_device:s0
+/dev/hevc_dev_mgr		u:object_r:vpu_device:s0
+/dev/jpu_.*				u:object_r:vpu_device:s0
+/dev/jpeg.*				u:object_r:vpu_device:s0
+
+/dev/viqe				u:object_r:graphics_device:s0
+/dev/scaler[0-4]*		u:object_r:graphics_device:s0
+/dev/wmixer[0-1]*		u:object_r:graphics_device:s0
+/dev/tcc_vsync[0-1]*	u:object_r:graphics_device:s0
+/dev/tcc_lut			u:object_r:graphics_device:s0
+/dev/overlay[0-1]*		u:object_r:graphics_device:s0
+
+/dev/composite			u:object_r:graphics_device:s0
+/dev/component			u:object_r:graphics_device:s0
+
+/dev/ttyS[0-1]*		u:object_r:serial_device:s0
+
+/dev/tmem				u:object_r:tmem_device:s0
+/dev/admem                             u:object_r:admem_device:s0
+/dev/tcc-cp                            u:object_r:tcccp_device:s0
+/dev/iap2                              u:object_r:iap2_device:s0
+
+/dev/audio			u:object_r:hdmi_device:s0
+/dev/hdmi			u:object_r:hdmi_device:s0
+/dev/hpd			u:object_r:hdmi_device:s0
+/dev/CEC			u:object_r:hdmi_device:s0
+/dev/dw-hdmi-tx			u:object_r:hdmi_device:s0
+/dev/dw-hdmi-cec		u:object_r:hdmi_device:s0
+/dev/esm			u:object_r:hdmi_device:s0
+
+#/dev/tcc_dxb_ctrl		u:object_r:tcc_dxb_device:s0
+#/dev/tcc_dxb_internal[0-1]*	u:object_r:tcc_dxb_device:s0
+#/dev/tcc-tsif[0-2]*		u:object_r:tcc_dxb_device:s0
+#/dev/dvb0.*				u:object_r:tcc_dxb_device:s0
+#/dev/dvb1.*				u:object_r:tcc_dxb_device:s0
+
+/dev/i2c-[0-3]*			u:object_r:i2c_device:s0
+
+/dev/block/platform/76020600\.sdhc/by-name/boot       	u:object_r:boot_block_device:s0
+/dev/block/platform/76020600\.sdhc/by-name/system       u:object_r:system_block_device:s0
+/dev/block/platform/76020600\.sdhc/by-name/recovery     u:object_r:recovery_block_device:s0
+/dev/block/platform/76020600\.sdhc/by-name/userdata     u:object_r:userdata_block_device:s0
+/dev/block/platform/76020600\.sdhc/by-name/cache        u:object_r:cache_block_device:s0
+/dev/block/platform/76020600\.sdhc/by-name/misc         u:object_r:misc_block_device:s0
+/dev/block/platform/76020600\.sdhc/by-name/sest         u:object_r:userdata_block_device:s0
+/dev/block/platform/76020600\.sdhc/by-name/vendor       u:object_r:vendor_block_device:s0
+
+/dev/switch_gpio_reverse	u:object_r:switch_reverse_device:s0
+/dev/videosource		u:object_r:videosource_device:s0
+/dev/tcc_cm_ctrl		u:object_r:cm_ctrl_device:s0
+
+/dev/ttyprintk u:object_r:ttyprintk_device:s0
+
+/system/bin/setup_fs			u:object_r:setup_fs_exec:s0
+
+/vendor/bin/hw/android\.hardware\.dumpstate@1\.0-service.tcc      u:object_r:hal_dumpstate_impl_exec:s0
+
+/dev/mbtchar0           u:object_r:hci_attach_dev:s0
+
+#/data/hdcp		u:object_r:hdcp_data_file:s0
+
+/sys/kernel/debug/mali/gpu_memory			u:object_r:debugfs_mali:s0
+/sys/kernel/debug/ion/heaps/ion_noncontig_heap		u:object_r:debugfs_ion:s0
+/sys/kernel/debug/ion/heaps/ion_carveout_heap		u:object_r:debugfs_ion:s0
+/sys/devices/platform/76020600\.sdhc(/.*)?		u:object_r:sysfs_emmc:s0
+
+/(vendor|system/vendor)/lib(64)?/hw(/.*)?            u:object_r:vendor_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libpmap.so          u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/hw/gralloc\.tcc897x\.so	 u:object_r:same_process_hal_file:s0
+
+/vendor/bin/tee-supplicant	u:object_r:tee_supp_service_exec:s0
+
+/dev/tee0			u:object_r:tee_dev:s0
+/dev/teepriv0			u:object_r:tee_dev_priv:s0
+
+/vendor/lib/optee_armtz(/.*)?	u:object_r:tee_app_data:s0
+/mnt/vendor/sest(/.*)?			u:object_r:tee_data:s0
+/vendor/bin/hw/android\.hardware\.health@2\.0-service\.tcc          u:object_r:hal_health_default_exec:s0
+
+/system/bin/tingserver          u:object_r:tingserver_exec:s0
+
+/system/bin/iapserver          u:object_r:iapserver_exec:s0
+/dev/snd/pcmC1D0c                                u:object_r:iap2_audio_device:s0
+#/data/database(/.*)?           u:object_r:iap2_data_file:s0

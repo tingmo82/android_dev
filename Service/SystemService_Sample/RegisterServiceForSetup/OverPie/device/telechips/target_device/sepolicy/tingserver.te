@@ -1,0 +1,5 @@
+#tingserver service
+type tingserver, domain, coredomain;
+type tingserver_exec, exec_type, file_type;
+
+init_daemon_domain(tingserver);
