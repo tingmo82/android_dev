@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text -->
+    <dimen name="menu_textsize">20sp</dimen>
+</resources>

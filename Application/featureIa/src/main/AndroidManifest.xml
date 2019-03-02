@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.tingsoft.tingdev.featureIa">
+
+    <application>
+        <activity
+                android:name=".InstantMainActivity">
+            <meta-data
+                    android:name="default-url"
+                    android:value="https://tingdev.tingsoft.com/instant" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                        android:host="tingdev.tingsoft.com"
+                        android:pathPrefix="/instant"
+                        android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

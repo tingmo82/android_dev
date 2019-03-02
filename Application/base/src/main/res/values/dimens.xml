@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Layout Spaces -->
+    <dimen name="default_min_mar">2dp</dimen>
+    <dimen name="default_mid_mar">4dp</dimen>
+    <dimen name="default_max_mar">6dp</dimen>
+
+    <dimen name="default_comp_mar">12dp</dimen>
+    <dimen name="default_layout_pad">16dp</dimen>
+
+    <!-- Text -->
+    <dimen name="default_textsize">16sp</dimen>
+</resources>
